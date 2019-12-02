@@ -66,7 +66,7 @@ $$F比=\frac{n-r}{r-1}\frac{CSS}{RSS} \quad F\sim(r-1,n-r)$$
   
 $$ CMS=\frac{CSS}{r-1} \quad RMS=\frac{RSS}{n-r} \quad F-比=\frac{CSM}{RMS}$$
 
-<table style="margin-left:25%">
+<table align="center">
   <tr>
     <th>方差来源</th>
     <th>平方和</th>

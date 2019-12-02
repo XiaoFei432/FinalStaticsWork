@@ -66,7 +66,7 @@ $$F比=\frac{n-r}{r-1}\frac{CSS}{RSS} \quad F\sim(r-1,n-r)$$
   
 $$ CMS=\frac{CSS}{r-1} \quad RMS=\frac{RSS}{n-r} \quad F-比=\frac{CSM}{RMS}$$
 
-<table align="center">
+<table style="margin-left:25%">
   <tr>
     <th>方差来源</th>
     <th>平方和</th>
@@ -225,18 +225,10 @@ $${F\geq F_\alpha(r-1,n-r)}$$
   $$L_{yy}=\sum_{i=1}^n(y_i-\overline{y})^2$$
   $$L_{xy}=\sum_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})=\sum_{i=1}^nx_iy_i-n\overline{x}\,\overline{y}$$
   - 参数的估计量
-<<<<<<< HEAD
     $$\hat{\beta}_0=\overline{y}-\hat{\beta}_1\overline{x} \quad \hat{\beta}_1=\frac{L\_{xy}}{L\_{xx}}$$
 
     $$\hat{\sigma}^2=\frac{1}{n-2}(L_{yy}-\hat{\beta}_1 L\_{xy})$$
   > 上述参数的计算过程见PPT左侧笔记（比较重要）
-=======
-  
-    $$\hat{\beta}_0=\overline{y}-\hat{\beta}_1\overline{x} \quad \hat{\beta}_1=\frac{L_{xy}}{L_{xx}}$$
-    
-    $$\hat{\sigma}^2=\frac{1}{n-2}(L_{yy}-\hat{\beta}_1L_{xy})$$
-  > 上述参数的计算过程见PPT左侧笔记
->>>>>>> 6b3f928cee1497ce0793528705cdfb2dbebd1ca4
   - 变量关系强度的量化
     $$r=\frac{L_{xy}}{\sqrt{L_{xx}L_{yy}}}$$
     $$r^2=\frac{L_{xy}^2}{L_{xx}L_{yy}}$$

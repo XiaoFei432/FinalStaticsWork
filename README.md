@@ -225,7 +225,9 @@ $${F\geq F_\alpha(r-1,n-r)}$$
   $$L_{yy}=\sum_{i=1}^n(y_i-\overline{y})^2$$
   $$L_{xy}=\sum_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})=\sum_{i=1}^nx_iy_i-n\overline{x}\,\overline{y}$$
   - 参数的估计量
+  
     $$\hat{\beta}_0=\overline{y}-\hat{\beta}_1\overline{x} \quad \hat{\beta}_1=\frac{L_{xy}}{L_{xx}}$$
+    
     $$\hat{\sigma}^2=\frac{1}{n-2}(L_{yy}-\hat{\beta}_1L_{xy})$$
   > 上述参数的计算过程见PPT左侧笔记
   - 变量关系强度的量化

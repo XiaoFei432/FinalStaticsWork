@@ -203,7 +203,7 @@ $${F\geq F_\alpha(r-1,n-r)}$$
         + $\mu$已知
         + $\mu$未知
     + 双正态总体
-    + 指数分布
+    + 指数分布总体
     + 0-1分布总体
 
 + 非正态总体均值的假设检验
@@ -225,13 +225,14 @@ $${F\geq F_\alpha(r-1,n-r)}$$
   $$L_{yy}=\sum_{i=1}^n(y_i-\overline{y})^2$$
   $$L_{xy}=\sum_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})=\sum_{i=1}^nx_iy_i-n\overline{x}\,\overline{y}$$
   - 参数的估计量
-    $$\hat{\beta}_0=\overline{y}-\hat{\beta}_1\overline{x} \quad \hat{\beta}_1=\frac{L_{xy}}{L_{xx}}$$
-    $$\hat{\sigma}^2=\frac{1}{n-2}(L_{yy}-\hat{\beta}_1L_{xy})$$
-  > 上述参数的计算过程见PPT左侧笔记
+    $$\hat{\beta}_0=\overline{y}-\hat{\beta}_1\overline{x} \quad \hat{\beta}_1=\frac{L\_{xy}}{L\_{xx}}$$
+
+    $$\hat{\sigma}^2=\frac{1}{n-2}(L_{yy}-\hat{\beta}_1 L\_{xy})$$
+  > 上述参数的计算过程见PPT左侧笔记（比较重要）
   - 变量关系强度的量化
     $$r=\frac{L_{xy}}{\sqrt{L_{xx}L_{yy}}}$$
     $$r^2=\frac{L_{xy}^2}{L_{xx}L_{yy}}$$
-  > 在产生因变量变化的所有因素中，该自变量占据了其中$r^2*100\%$的份额
+  > 在产生因变量变化的所有因素中，该自变量占据了其中$r^2*100$%的份额
 
 
 + 估计量的分布
@@ -246,26 +247,26 @@ $${F\geq F_\alpha(r-1,n-r)}$$
   $$\frac{n-2}{\sigma^2}\hat{\sigma}^2\sim\chi^2(n-2)$$
   
 + 检验回归关系是否显著(对$\hat{\beta}_1$的参数检验)
-  - $H_0:\beta_1=0$,即回归不成立 $\quad H_1:回归成立$
-  - 统计量: 
-    $$ \frac{\hat{\beta}_1}{\hat{\sigma}}\sqrt{\sum_{i=1}^n(x_i-\overline{x})^2}\sim t(n-2)$$
-    更多的是采用: (原理: $t^2(n)\sim F(1,n)$)
-    $$\frac{\hat{\beta}_1^2}{\hat{\sigma}^2}L_{xx}\sim F(1,n-2)$$
+  - $H_0:\beta_1=0$,即回归不成立 $\quad H_1:\beta_1 \ne 0$,即回归成立
+  - 统计量(最原始的，由良好的点估计$\hat{\beta}\_1$转化得到): 
+     $$\frac{\hat{\beta}\_1}{\hat{\sigma}}\sqrt{\sum\_{i=1}^n(x_i-\overline{x})^2}\sim t(n-2)$$
+    更多的是采用: (原理: $t^2(n)\sim F(1,n)$。原因:绝对值太烦了不好计算)
+    $$\frac{\hat{\beta}\_1^2}{\hat{\sigma}^2}L\_{xx}\sim F(1,n-2)$$
     即,(代入)
-    $$\frac{(n-2)L_{xy}^2}{L_{xx}L_{yy}-L_{xy}^2}\sim F(1,n-2)$$
+    $$\frac{(n-2)L\_{xy}^2}{L_{xx}L_{yy}-L_{xy}^2}\sim F(1,n-2)$$
     则，统计量如下
     $$F=\frac{(n-2)r^2}{(1-r^2)}$$
   - 否定域
     $${F>F_\alpha(1,n-2)}$$
     若满足否定域，即$H_0$被否定，则认为回归方程成立
-  
+  > + 此处构造出的否定域形式不满足我们上面假设检验思想，因为F是原始统计量平方得到的，已经不是最初的统计量，所以本应该是双边的否定域，由于平方的缘故变成了单边。
   > + 上述统计量的构造思路？
   > + 此处可以思考对$\hat{\beta}_0$的参数检验，统计量该如何构造？
 + 区间估计(PPT上是对$\hat{\beta}_1$的区间估计)
   - 枢轴量：(掌握构造枢轴量的思路)
-    $$\frac{\hat{\beta}_1-\beta_1}{\hat{\sigma}}\sqrt{\sum_{i=1}^n(x_i-\overline{x})^2}\sim t(n-2)$$
+    $$\frac{\hat{\beta}\_1-\beta_1}{\hat{\sigma}}\sqrt{\sum\_{i=1}^n(x_i-\overline{x})^2}\sim t(n-2)$$
   - 置信区间:
-    $$(\hat{\beta}_1\pm \frac{\hat{\sigma}}{\sqrt{\sum_{i=1}^n(x_i-\overline{x})^2}}t_{\alpha/2}(n-2))$$
+    $$(\hat{\beta}\_1\pm \frac{\hat{\sigma}}{\sqrt{\sum\_{i=1}^n(x_i-\overline{x})^2}}t_{\alpha/2}(n-2))$$
 
   > + 上述枢轴量的构造思路？
   > + 此处可以思考对$\hat{\beta}_0$的区间估计，枢轴量该如何构造？
